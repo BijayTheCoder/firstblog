@@ -22,7 +22,7 @@
 
   <div class="card">
     <div class="card-body register-card-body">
-      <p class="login-box-msg">Register a new membership</p>
+      <p class="login-box-msg">Creat a new user</p>
 
       <form action="{{ route('users.store') }}" method="POST">
           @include('users.partial.form', ['create'=>true])

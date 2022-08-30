@@ -40,7 +40,7 @@ class ContactUsController extends Controller
 
         $contact->save();
 
-        \Mail::send('contact-email',
+        \Mail::send('/users/contact-email',
              array(
                  'fullname' => $request->get('fullname'),
                  'email' => $request->get('email'),

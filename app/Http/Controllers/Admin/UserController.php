@@ -40,6 +40,12 @@ class UserController extends Controller
     {
         $data = User::create($request->except(['_token', 'roles']));
 
+        $this->validate($request, [
+            'name' => 'required',
+            'email' => 'required|email',
+            'password' => 'required',
+        ]);
+
         return redirect(route('users.index'));
     }
 
